@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="index.css" type="text/css" />
+<body class="portal">
+  <!-- Full-screen Background Container -->
+  <div class="background-container"></div>
+
+  <!-- Notification Ribbon Container -->
+  <div id="notification-ribbon" class="ribbon-hidden">
+    <span id="ribbon-message"></span>
+  </div>
+
+  <!-- Main Glassy Card Container -->
+  <div class="glassy-card">
+    <!-- Header -->
+    <header class="card-header">
+      <img class="logo" src="img/onetaplogolight.png" alt="Onetap Logo" />
+      <a
+        href="https://onetapconnect.co.ke/dashboard/packages"
+        class="user-profile-link"
+      >
+        <!-- Simple inline SVG user profile icon -->
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
+    </header>
+
+    <div class="oper-section-outer">
+      <div class="oper-section-inner">
+        <!-- Keep hidden for semantic compatibility, driven now by ribbons -->
+        <span id="oper-hint" style="display: none; color: red"></span>
+        <div id="hotspot-section">
+          <select id="hotspot-selector" class="oper-section-item"></select>
+        </div>
+        <form id="login-form">
+          <div id="input-voucher">
+            <input
+              id="voucherCode"
+              class="oper-section-item input"
+              name="voucherCode"
+              type="text"
+              placeholder="Voucher Code"
+            />
+          </div>
+          <div id="input-user">
+            <input
+              id="username"
+              class="oper-section-item input"
+              name="username"
+              type="text"
+              placeholder="Username"
+            />
+          </div>
+          <div id="input-password" class="user-input password-wrapper">
+            <input
+              id="password"
+              class="oper-section-item input"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <span class="password-toggle">
+              <!-- Eye icon -->
+              <svg
+                class="eye-icon"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+          <div id="input-simple" class="password-wrapper">
+            <input
+              id="simplePassword"
+              class="password oper-section-item input"
+              name="simplePassword"
+              type="password"
+              placeholder="Password"
+            />
+            <span class="password-toggle">
+              <!-- Eye icon -->
+              <svg
+                class="eye-icon"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+          <div id="input-phone-num">
+            <span class="add">+</span
+            ><input id="country-code" class="input" /><input
+              id="phone-number"
+              class="input"
+              name="phone-number"
+              type="text"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div id="input-verify-code">
+            <input
+              id="verify-code"
+              class="input"
+              name="verify-code"
+              type="text"
+              placeholder="Verification Code"
+            /><button id="get-code" class="button">Get Code</button>
+          </div>
+          <input name="clientMac" id="cMac" style="display: none" />
+          <input name="radiusSvrIp" id="radiusServerIp" style="display: none" />
+        </form>
+        <div id="button-area">
+          <button id="button-login" class="button oper-section-item">
+            Log In
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-buttons-group">
+      <a href="https://onetapconnect.co.ke/" class="action-btn primary-action"
+        >Purchase Bundles</a
+      >
+      <a
+        href="https://onetapconnect.co.ke/dashboard/devices"
+        class="action-btn secondary-action"
+        >Add Devices to Package</a
+      >
+    </div>
+
+    <footer class="card-footer">
+      <p>Contact us: <a href="tel:+254721846327">+254 721 846327</a></p>
+      <p>
+        <a href="mailto:info@onetapconnect.co.ke">info@onetapconnect.co.ke</a>
+      </p>
+    </footer>
+  </div>
+
+  <div id="form-auth-msg">
+    <div id="form-auth-outer" class="glassy-card">
+      <div id="form-auth-close">
+        <svg
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+      <div id="form-auth-inner">
+        <div id="form-auth-header">
+          <div id="form-auth-title"></div>
+          <div id="form-auth-note"></div>
+        </div>
+        <div id="form-auth-content"></div>
+        <div id="form-auth-footer">
+          <a id="form-auth-submit" href="javascript:void(0);" class="button"
+            >Submit</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="jquery.min.js"></script>
+</body>
+<script src="index.js"></script>
