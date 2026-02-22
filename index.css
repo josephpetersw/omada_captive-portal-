@@ -56,6 +56,12 @@ body.portal {
   z-index: -1;
 }
 
+@keyframes gradientPop {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* Liquid Glass Purchase Card */
 .liquid-purchase-card {
     background: rgba(255, 255, 255, 0.2);
@@ -92,6 +98,17 @@ body.portal {
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #4a90e2, #00c986, #00A870, #4a90e2);
+    background-size: 300% 300%;
+    animation: gradientPop 4s ease infinite;
+    color: white;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.purchase-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Glassy Card Structure */
